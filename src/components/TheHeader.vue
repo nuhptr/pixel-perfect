@@ -1,11 +1,30 @@
 <script setup>
-   // import { ref, computed } from "vue"
+   import { computed, onBeforeUnmount, onMounted, ref } from "vue"
    import { RouterLink } from "vue-router"
+
+   let isBlurActive = ref(false)
+
+   const updateScroll = () => {
+      let scrollPosition = window.scrollY || document.documentElement.scrollTop
+      isBlurActive = scrollPosition > 30
+      console.log(isBlurActive)
+   }
+
+   const addBackdrop = computed(() => {
+      return isBlurActive ? "backdrop-blur" : ""
+   })
+
+   onMounted(() => {
+      window.addEventListener("scroll", updateScroll)
+   })
+   onBeforeUnmount(() => {
+      window.removeEventListener("scroll", updateScroll)
+   })
 </script>
 
 <template>
-   <header>
-      <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
+   <header class="sticky top-0 z-50" :class="addBackdrop">
+      <nav class="bg-white/40 border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
          <div class="container flex flex-wrap items-center justify-between mx-auto my-2">
             <RouterLink to="/" class="flex items-center">
                <img src="@/assets/img/logo.svg" class="h-8 ml-3 sm:ml-0 sm:h-8" alt="Logo" />
@@ -13,12 +32,12 @@
             <div class="md:order-2">
                <a
                   href="login.html"
-                  class="px-8 py-3 mt-2 mr-2 text-base font-medium text-black bg-gray-200 border border-transparent rounded-full hover:bg-gray-500 hover:text-white md:py-2 md:text-sm md:px-8 hover:shadow">
+                  class="px-8 py-3 mt-2 mr-2 text-base font-medium text-black bg-gray-200 border border-transparent rounded-full hover:bg-gray-300/20 md:py-2 md:text-sm md:px-8">
                   Sign In
                </a>
                <a
                   href="register.html"
-                  class="px-8 py-3 text-base font-medium text-black border border-transparent rounded-full dark:text-white dark:hover:bg-slate-300/15 bg-navy hover:bg-navy md:py-2 md:text-sm md:px-8 hover:shadow">
+                  class="px-8 py-3 text-base font-medium text-white border border-transparent rounded-full dark:hover:bg-slate-300/15 bg-navy md:py-2 md:text-sm md:px-8">
                   Sign Up
                </a>
             </div>

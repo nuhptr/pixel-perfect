@@ -4,6 +4,8 @@
 </script>
 
 <template>
-   <TheHeader />
-   <RouterView />
+   <main class="no-scrollbar">
+      <TheHeader />
+      <RouterView />
+   </main>
 </template>

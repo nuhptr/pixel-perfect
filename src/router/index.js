@@ -4,6 +4,8 @@ import HomeView from "@/views/HomeView.vue"
 import CategoriesView from "@/views/CategoriesView.vue"
 import PricingView from "@/views/PricingView.vue"
 import StudyCaseView from "@/views/StudyCaseView.vue"
+import LoginView from "../views/LoginView.vue"
+import RegisterView from "../views/RegisterView.vue"
 
 const router = createRouter({
    history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +14,8 @@ const router = createRouter({
       { path: "/categories", name: "categories", component: CategoriesView },
       { path: "/pricing", name: "pricing", component: PricingView },
       { path: "/study-case", name: "study-case", component: StudyCaseView },
+      { path: "/login", name: "login", component: LoginView },
+      { path: "/register", name: "register", component: RegisterView },
       // {
       //    path: "/about",
       //    name: "about",

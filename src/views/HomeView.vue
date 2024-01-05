@@ -2,12 +2,12 @@
 
 <template>
    <section>
-      <div class="relative overflow-y-scroll bg-white no-scrollbar">
-         <div class="mx-auto max-w-7xl">
-            <div
-               class="z-10 px-5 pb-8 bg-white xl:pl-20 lg:pl-16 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+      <!-- Hero -->
+      <div class="relative bg-white no-scrollbar">
+         <div class="flex flex-col items-center justify-center mx-auto lg:flex-row max-w-7xl">
+            <div class="px-5 pb-8 bg-white xl:pl-20 lg:pl-16 md:pb-20 lg:max-w-xl lg:w-full lg:pb-28 xl:pb-32">
                <main class="mx-auto mt-10 max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-36">
-                  <div class="sm:text-center lg:text-left">
+                  <div class="text-center lg:text-left">
                      <h1 class="text-3xl font-bold !leading-snug tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
                         Design Better & <br />
                         Faster Than Before.
@@ -29,12 +29,13 @@
                   </div>
                </main>
             </div>
-         </div>
-         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="w-full lg:w-3/4 lg:mt-8" src="@/assets/img/hero-image.png" alt="hero image" />
+            <div class="lg:inset-y-0 lg:right-0 lg:w-1/2">
+               <img class="w-full lg:w-full lg:mt-8" src="@/assets/img/hero-image.png" alt="hero image" />
+            </div>
          </div>
       </div>
 
+      <!-- Categories -->
       <div class="container px-4 mx-auto my-16 md:px-12">
          <h2 class="mb-4 text-xl font-medium md:mb-0 md:text-lg">Top Categories</h2>
          <div class="flex flex-wrap -mx-1 lg:-mx-4">
@@ -105,6 +106,7 @@
          </div>
       </div>
 
+      <!-- Item -->
       <div class="container px-4 mx-auto my-16 md:px-12">
          <h2 class="mb-4 text-xl font-medium md:mb-0 md:text-lg">New Items</h2>
          <div class="flex flex-wrap -mx-1 lg:-mx-4">

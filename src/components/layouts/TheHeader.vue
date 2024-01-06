@@ -24,7 +24,7 @@
 
 <template>
    <header class="sticky top-0 z-50" :class="addBackdrop">
-      <nav class="bg-white/40 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
+      <nav class="bg-white/40 px-2 sm:px-4 py-2.5">
          <div class="container flex flex-wrap items-center justify-between mx-auto my-2">
             <Logo />
             <CTA />

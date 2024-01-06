@@ -4,7 +4,7 @@
    <!-- Hero -->
    <div class="relative bg-white">
       <div class="flex flex-col items-center justify-center mx-auto lg:flex-row max-w-7xl">
-         <div class="px-5 pb-8 bg-white xl:pl-20 lg:pl-16 md:pb-20 lg:max-w-xl lg:w-full lg:pb-28 xl:pb-32">
+         <div class="px-5 pb-8 bg-white xl:pl-20 lg:pl-16 md:pb-16 lg:max-w-xl lg:w-full lg:pb-20 xl:pb-28">
             <main class="mx-auto mt-10 max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-36">
                <div class="text-center lg:text-left">
                   <h1 class="text-3xl font-bold !leading-snug tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
@@ -13,8 +13,8 @@
                   </h1>
                   <p
                      class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                     Accelerate your work with our millions <span class="block lg:mb-1"></span> of ready-to-use design
-                     projects.
+                     Accelerate your work with our millions <br class="block lg:mb-1" />
+                     of ready-to-use design projects.
                   </p>
                   <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                      <div class="rounded-full">

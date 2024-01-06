@@ -1,5 +1,8 @@
 <script setup>
-   const props = defineProps({ title: String, image: String, items: Number })
+   const props = defineProps({ title: String, image: String, itemsCount: Number })
+
+   // just adding commas to numbers if you not passing constructor options
+   const formatNumber = (number) => new Intl.NumberFormat().format(number)
 </script>
 
 <template>
@@ -7,15 +10,17 @@
       <div class="overflow-hidden border border-gray-200 rounded-xl">
          <a href="details.html">
             <div class="m-4 overflow-hidden rounded-xl">
-               <img alt="Placeholder" class="block w-full h-auto" src="@/assets/img/categories-1.jpg" />
+               <img alt="Placeholder" class="block w-full h-auto" :src="'/src/assets/img/' + image" />
             </div>
          </a>
 
          <header class="px-4 mb-4 leading-tight">
             <h1 class="text-lg">
-               <a class="font-semibold text-black no-underline hover:underline" href="#"> Mobile UI Kit </a>
+               <a class="font-semibold text-black no-underline hover:underline" href="#"> {{ title }} </a>
             </h1>
-            <span class="block text-sm font-light text-gray-500 no-underline"> 731 items </span>
+            <span class="block text-sm font-light text-gray-500 no-underline">
+               {{ formatNumber(itemsCount) }} items
+            </span>
          </header>
       </div>
    </div>

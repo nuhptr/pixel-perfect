@@ -13,7 +13,7 @@
             v-model="form.email"
             placeholder="Type your email"
             id="email"
-            type="text"
+            type="email"
             name="email"
             class="block w-full py-3 mt-2 border border-gray-300 rounded-full shadow-sm px-7 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 disabled:bg-gray-100" />
       </div>

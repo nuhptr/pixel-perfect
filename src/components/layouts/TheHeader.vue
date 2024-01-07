@@ -3,7 +3,7 @@
 
    import Logo from "./Logo.vue"
    import NavigationLink from "./NavigationLink.vue"
-   import CTA from "./CTA.vue"
+   import AuthButton from "./AuthButton.vue"
 
    let isBlurActive = ref(false)
 
@@ -27,7 +27,7 @@
       <nav class="bg-white/40 px-2 sm:px-4 py-2.5">
          <div class="container flex flex-wrap items-center justify-between mx-auto my-2">
             <Logo />
-            <CTA />
+            <AuthButton />
             <NavigationLink />
          </div>
       </nav>

@@ -5,9 +5,9 @@
 </script>
 
 <template>
-   <section>
+   <main>
       <Hero />
       <Categories />
       <Items />
-   </section>
+   </main>
 </template>

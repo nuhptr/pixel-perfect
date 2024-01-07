@@ -1,5 +1,5 @@
 <script setup>
-   const props = defineProps({ title: String, image: String, itemsCount: Number })
+   defineProps({ title: String, image: String, itemsCount: Number })
 
    // just adding commas to numbers if you not passing constructor options
    const formatNumber = (number) => new Intl.NumberFormat().format(number)

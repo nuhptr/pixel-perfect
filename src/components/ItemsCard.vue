@@ -1,9 +1,5 @@
 <script setup>
-   const props = defineProps({
-      title: String,
-      image: String,
-      categories: String,
-   })
+   defineProps({ title: String, image: String, categories: String })
 </script>
 
 <template>

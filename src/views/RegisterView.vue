@@ -1,8 +1,6 @@
 <script setup>
    import RegisterForm from "@/components/authentication/RegisterForm.vue"
-   import Customizable from "@/components/authentication/features/Customizable.vue"
-   import Fortune from "@/components/authentication/features/Fortune.vue"
-   import Documentation from "@/components/authentication/features/Documentation.vue"
+   import FeatureLists from "@/components/authentication/FeatureLists.vue"
 </script>
 
 <template>
@@ -18,9 +16,7 @@
             <div class="w-full p-5 mx-auto md:max-w-4xl">
                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <div class="mx-auto md:mx-0">
-                     <Customizable />
-                     <Fortune />
-                     <Documentation />
+                     <FeatureLists />
                   </div>
                   <div>
                      <RegisterForm />

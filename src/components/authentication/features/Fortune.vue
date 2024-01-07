@@ -1,5 +1,5 @@
 <script setup>
-   import IconBadge from "@/components/icons/IconBadge.vue"
+   import IconBadge from "../icons/IconBadge.vue"
 </script>
 
 <template>
@@ -8,9 +8,6 @@
          <IconBadge />
          <h3 class="inline-block ml-2 text-lg font-semibold">500 Fortune</h3>
       </div>
-      <p class="mt-2 text-lg text-gray-500">
-         Accelerate your work with our millions <br />
-         of ready-to-use design projects.
-      </p>
+      <p class="mt-2 text-lg text-gray-500">Accelerate your work with our millions of ready-to-use design projects.</p>
    </div>
 </template>

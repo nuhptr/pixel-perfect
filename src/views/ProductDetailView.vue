@@ -15,7 +15,7 @@
             <!-- Description -->
             <section class="" id="orders">
                <h1 class="mt-8 mb-3 text-lg font-semibold">About</h1>
-               <div class="text-gray-500 leading-relaxed">
+               <div class="leading-relaxed text-gray-500">
                   <p class="pb-4">
                      Sportly App UI Kit will help your Sport, Fitness, and Workout App products or services. Came with
                      modern and sporty style, you can easily edit and customize all elements with components that can

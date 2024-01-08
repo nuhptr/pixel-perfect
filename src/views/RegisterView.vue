@@ -14,11 +14,11 @@
                </h2>
             </div>
             <div class="w-full p-5 mx-auto md:max-w-4xl">
-               <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-                  <div class="mx-auto md:mx-0">
+               <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  <div class="order-2 mx-auto md:order-1 md:mx-0">
                      <FeatureLists />
                   </div>
-                  <div>
+                  <div class="order-1 md:order-2">
                      <RegisterForm />
                   </div>
                </div>

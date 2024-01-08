@@ -7,46 +7,19 @@ import PricingView from "@/views/PricingView.vue"
 import StudyCaseView from "@/views/StudyCaseView.vue"
 import LoginView from "@/views/LoginView.vue"
 import RegisterView from "@/views/RegisterView.vue"
+import SuccessView from "@/views/SuccessView.vue"
 
 const router = createRouter({
    history: createWebHistory(import.meta.env.BASE_URL),
    routes: [
-      {
-         path: "/",
-         name: "home",
-         component: HomeView,
-      },
-      {
-         // path: "/details/:id",
-         path: "/product-details",
-         name: "product-details",
-         component: ProductDetailView,
-      },
-      {
-         path: "/categories",
-         name: "categories",
-         component: CategoriesView,
-      },
-      {
-         path: "/pricing",
-         name: "pricing",
-         component: PricingView,
-      },
-      {
-         path: "/study-case",
-         name: "study-case",
-         component: StudyCaseView,
-      },
-      {
-         path: "/login",
-         name: "login",
-         component: LoginView,
-      },
-      {
-         path: "/register",
-         name: "register",
-         component: RegisterView,
-      },
+      { path: "/", name: "home", component: HomeView },
+      { path: "/product-details/:id", name: "product-details", component: ProductDetailView },
+      { path: "/categories", name: "categories", component: CategoriesView },
+      { path: "/pricing", name: "pricing", component: PricingView },
+      { path: "/study-case", name: "study-case", component: StudyCaseView },
+      { path: "/login", name: "login", component: LoginView },
+      { path: "/register", name: "register", component: RegisterView },
+      { path: "/success", name: "success", component: SuccessView },
       // {
       //    path: "/about",
       //    name: "about",

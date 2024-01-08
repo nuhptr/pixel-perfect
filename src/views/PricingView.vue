@@ -1,5 +1,9 @@
 <script setup>
-   // import FeatureLists from "@/components/authentication/FeatureLists.vue"
+   import { RouterLink } from "vue-router"
+
+   // import Customizable from "@/components/authentication/features/Customizable.vue"
+   // import Documentation from "@/components/authentication/features/Documentation.vue"
+   // import Fortune from "@/components/authentication/features/Fortune.vue"
 </script>
 
 <template>
@@ -44,11 +48,11 @@
                               Pre-built design screen
                            </li>
                         </ul>
-                        <a
-                           href="checkout.html"
+                        <RouterLink
+                           to="/success"
                            class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-black bg-gray-200 border border-transparent rounded-full hover:bg-gray-300 md:py-2 md:text-md md:px-10">
                            Checkout Now
-                        </a>
+                        </RouterLink>
                      </div>
                   </div>
                   <div>
@@ -96,11 +100,11 @@
                               Unlock cloning app
                            </li>
                         </ul>
-                        <a
-                           href="checkout.html"
+                        <RouterLink
+                           to="/success"
                            class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10">
                            Checkout Now
-                        </a>
+                        </RouterLink>
                      </div>
                   </div>
                </div>
@@ -108,7 +112,9 @@
 
             <!-- <div class="w-full p-5 mx-auto mb-10 md:max-w-7xl">
                <div class="grid grid-cols-1 gap-4 mx-auto md:grid-cols-3 md:mx-0">
-                  <FeatureLists />
+                  <Customizable />
+                  <Documentation />
+                  <Fortune />
                </div>
             </div> -->
          </div>

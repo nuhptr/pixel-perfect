@@ -5,9 +5,7 @@
 </script>
 
 <template>
-   <main>
-      <Hero />
-      <Categories />
-      <Items />
-   </main>
+   <Hero />
+   <Categories />
+   <Items />
 </template>

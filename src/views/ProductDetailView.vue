@@ -1,4 +1,6 @@
 <script setup>
+   import { RouterLink } from "vue-router"
+
    import Gallery from "@/components/details/Gallery.vue"
 </script>
 
@@ -15,19 +17,17 @@
             <!-- Description -->
             <section class="" id="orders">
                <h1 class="mt-8 mb-3 text-lg font-semibold">About</h1>
-               <div class="leading-relaxed text-gray-500">
+               <div class="leading-loose text-gray-500">
                   <p class="pb-4">
                      Sportly App UI Kit will help your Sport, Fitness, and Workout App products or services. Came with
                      modern and sporty style, you can easily edit and customize all elements with components that can
                      speed up your design process.
                   </p>
                   <p class="pb-4">
-                     Suitable for : <br />
-                     - Sport App <br />
-                     - Fitness & GYM App <br />
-                     - Workout App <br />
-                     - Trainer & Tracker App <br />
-                     - And many more <br />
+                     Suitable for :
+                     <strong class="tracking-tight text-indigo-600">
+                        Sport App, - Fitness & GYM App - Workout App, - Trainer & Tracker App, And many more
+                     </strong>
                   </p>
                </div>
             </section>
@@ -79,11 +79,11 @@
                         </li>
                      </ul>
                   </div>
-                  <a
-                     href="checkout.html"
+                  <RouterLink
+                     to="/pricing"
                      class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10">
                      Download Now
-                  </a>
+                  </RouterLink>
                </div>
             </div>
          </aside>

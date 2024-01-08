@@ -1,7 +1,10 @@
-<script setup></script>
+<script setup>
+   import Categories from "@/components/homepage/Categories.vue"
+</script>
 
 <template>
-   <div class="w-1/2 h-80 mx-auto flex items-center justify-center">
-      <h1>Categories Page</h1>
+   <div class="mt-10">
+      <Categories title="Popular Categories" />
+      <Categories title="Latest Categories" />
    </div>
 </template>

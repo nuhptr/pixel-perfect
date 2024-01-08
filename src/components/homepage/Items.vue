@@ -4,9 +4,9 @@
    import ItemsCard from "../ItemsCard.vue"
 
    const items = ref([
-      { title: "Mobile UI Kit", categories: "Mobile UI Kit", image: "items-1.jpg" },
-      { title: "Online Doctor Consultation", categories: "Website UI Kit", image: "items-2.jpg" },
-      { title: "Banking Crypto", categories: "Mobile UI Kit", image: "items-3.jpg" },
+      { id: 1, title: "Mobile UI Kit", categories: "Mobile UI Kit", image: "items-1.jpg" },
+      { id: 2, title: "Online Doctor Consultation", categories: "Website UI Kit", image: "items-2.jpg" },
+      { id: 3, title: "Banking Crypto", categories: "Mobile UI Kit", image: "items-3.jpg" },
    ])
 </script>
 
@@ -18,6 +18,7 @@
          <ItemsCard
             v-for="item in items"
             :key="item.title"
+            :id="item.id"
             :title="item.title"
             :categories="item.categories"
             :image="item.image" />

@@ -4,12 +4,13 @@
    import Logo from "./Logo.vue"
    import NavigationLink from "./NavigationLink.vue"
    import AuthButton from "./AuthButton.vue"
+   // import UserInfo from "./UserInfo.vue"
 
    let isBlurActive = ref(false)
 
    function updateScroll() {
       let scrollPosition = window.scrollY || document.documentElement.scrollTop
-      isBlurActive = scrollPosition > 30
+      isBlurActive = scrollPosition > 50
    }
 
    const addBackdrop = computed(() => (isBlurActive ? "backdrop-blur" : ""))
@@ -28,6 +29,12 @@
          <div class="container flex flex-wrap items-center justify-between mx-auto my-2">
             <Logo />
             <AuthButton />
+            <!-- <UserInfo
+               :user="{
+                  name: 'John Doe',
+                  profile_photo_url: '/src/assets/img/gallery-1.png',
+                  email: 'jhondoe@gmail.com'
+               }" /> -->
             <NavigationLink />
          </div>
       </nav>

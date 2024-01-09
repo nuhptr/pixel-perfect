@@ -1,7 +1,12 @@
 <script setup>
+   import { onMounted, onUnmounted } from "vue"
    import { RouterLink } from "vue-router"
 
    import Gallery from "@/components/details/Gallery.vue"
+
+   onMounted(() => {
+      window.scrollTo(0, 0)
+   })
 </script>
 
 <template>

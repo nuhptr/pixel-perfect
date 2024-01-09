@@ -1,10 +1,10 @@
 <script setup>
-   import Categories from "@/components/homepage/Categories.vue"
+   import AllCategories from "@/components/categories/AllCategories.vue"
 </script>
 
 <template>
    <div class="mt-10">
-      <Categories title="Popular Categories" />
-      <Categories title="Latest Categories" />
+      <AllCategories title="All Categories" />
+      <AllCategories title="Latest Categories" />
    </div>
 </template>

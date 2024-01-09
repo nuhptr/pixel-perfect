@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import HomeView from "@/views/HomeView.vue"
 import ProductDetailView from "@/views/ProductDetailView.vue"
 import CategoriesView from "@/views/CategoriesView.vue"
+import CategoriesDetailView from "@/views/CategoriesDetailView.vue"
 import PricingView from "@/views/PricingView.vue"
 import StudyCaseView from "@/views/StudyCaseView.vue"
 import LoginView from "@/views/LoginView.vue"
@@ -15,6 +16,7 @@ const router = createRouter({
       { path: "/", name: "home", component: HomeView },
       { path: "/product-details/:id", name: "product-details", component: ProductDetailView },
       { path: "/categories", name: "categories", component: CategoriesView },
+      { path: "/categories/:id", name: "category-items", component: CategoriesDetailView },
       { path: "/pricing", name: "pricing", component: PricingView },
       { path: "/study-case", name: "study-case", component: StudyCaseView },
       { path: "/login", name: "login", component: LoginView },

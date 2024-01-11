@@ -1,5 +1,5 @@
 <script setup>
-   import { RouterLink } from "vue-router"
+import { RouterLink } from "vue-router"
 </script>
 
 <template>
@@ -11,9 +11,7 @@
                <h2 class="mb-2 text-2xl font-bold text-center">Payment Success</h2>
                <p class="mb-5 text-lg text-center text-gray-500">Ready to explore our high quality design?</p>
             </div>
-            <RouterLink
-               to="/"
-               replace="true"
+            <RouterLink to="/" replace="true"
                class="px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-lg md:px-10 hover:shadow">
                Explore Now
             </RouterLink>

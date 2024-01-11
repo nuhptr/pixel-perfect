@@ -1,6 +1,6 @@
 <script setup>
-   import RegisterForm from "@/components/authentication/RegisterForm.vue"
-   import FeatureLists from "@/components/authentication/FeatureLists.vue"
+import RegisterForm from "@/components/authentication/RegisterForm.vue"
+import FeatureLists from "@/components/authentication/FeatureLists.vue"
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script setup>
-   import { RouterLink } from "vue-router"
+import { RouterLink } from "vue-router"
 
-   // import Customizable from "@/components/authentication/features/Customizable.vue"
-   // import Documentation from "@/components/authentication/features/Documentation.vue"
-   // import Fortune from "@/components/authentication/features/Fortune.vue"
+// import Customizable from "@/components/authentication/features/Customizable.vue"
+// import Documentation from "@/components/authentication/features/Documentation.vue"
+// import Fortune from "@/components/authentication/features/Fortune.vue"
 </script>
 
 <template>
@@ -48,8 +48,7 @@
                               Pre-built design screen
                            </li>
                         </ul>
-                        <RouterLink
-                           to="/success"
+                        <RouterLink to="/success"
                            class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-black bg-gray-200 border border-transparent rounded-full hover:bg-gray-300 md:py-2 md:text-md md:px-10">
                            Checkout Now
                         </RouterLink>
@@ -100,8 +99,7 @@
                               Unlock cloning app
                            </li>
                         </ul>
-                        <RouterLink
-                           to="/success"
+                        <RouterLink to="/success"
                            class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10">
                            Checkout Now
                         </RouterLink>

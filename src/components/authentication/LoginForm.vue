@@ -4,6 +4,20 @@ import { RouterLink } from "vue-router"
 import axios from "axios"
 
 const form = ref({ email: "", password: "" })
+
+async function login() {
+   try {
+      const response = await axios.post(import.meta.env.VITE_API_URL + "api/login", {
+         params: {
+            email: form.value.email,
+            password: form.value.password
+         }
+      })
+      console.log(response)
+   } catch (error) {
+      console.error(error)
+   }
+}
 </script>
 
 <template>

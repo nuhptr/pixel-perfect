@@ -8,12 +8,12 @@ const form = ref({ email: "", password: "" })
 async function login() {
    try {
       const response = await axios.post(import.meta.env.VITE_API_URL + "api/login", {
-         params: {
-            email: form.value.email,
-            password: form.value.password
-         }
+         email: form.value.email,
+         password: form.value.password
       })
-      console.log(response)
+      // console.log(response.data.data)
+      localStorage.setItem("access_token", response.data.data.access_token)
+      localStorage.setItem("token_type", response.data.data.token_type)
    } catch (error) {
       console.error(error)
    }
@@ -29,11 +29,12 @@ async function login() {
       </div>
       <div class="mb-4">
          <label class="block mb-1" for="password">Password</label>
-         <input v-model="form.password" placeholder="Type your password" id="password" type="password" name="password"
+         <input @keyup.enter="login" v-model="form.password" placeholder="Type your password" id="password" type="password"
+            name="password"
             class="block w-full py-3 mt-2 border border-gray-300 rounded-full shadow-sm px-7 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 disabled:bg-gray-100" />
       </div>
       <div class="mt-6">
-         <button type="button"
+         <button type="button" @click="login" v-if="form.email && form.password"
             class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-lg md:px-10">
             Sign In
          </button>

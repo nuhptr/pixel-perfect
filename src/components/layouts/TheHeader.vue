@@ -4,7 +4,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from "vue"
 import Logo from "./Logo.vue"
 import NavigationLink from "./NavigationLink.vue"
 import AuthButton from "./AuthButton.vue"
-// import UserInfo from "./UserInfo.vue"
+import UserInfo from "./UserInfo.vue"
 
 let isBlurActive = ref(false)
 

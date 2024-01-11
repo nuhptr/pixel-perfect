@@ -4,8 +4,6 @@ import { useRouter } from "vue-router"
 
 const router = useRouter()
 
-defineProps({ user: Object })
-
 let show = ref(false)
 const toggleDropdown = () => (show = !show)
 

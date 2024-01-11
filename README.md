@@ -1,8 +1,6 @@
 # pixel-perfect
 
-This template should help get you started developing with Vue 3 in Vite.
-
-Timeline : Video 10 - 49:47
+Build Pixel Perfect UI Kit websites with Vue 3 and Tailwind CSS.
 
 ## Dependencies
 

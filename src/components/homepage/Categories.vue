@@ -14,7 +14,7 @@
    async function getCategoriesData() {
       try {
          isLoading.value = true
-         const response = await axios.get(import.meta.env.VITE_API_URL + "/api/categories?show_product=1&limit=4")
+         const response = await axios.get(import.meta.env.VITE_API_URL + "/api/categories?limit=4")
          // console.log(response.data.data)
 
          categories.value = response.data.data.data

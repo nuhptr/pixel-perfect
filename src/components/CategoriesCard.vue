@@ -1,8 +1,8 @@
 <script setup>
-   defineProps({ category: Object })
+defineProps({ category: Object })
 
-   // just adding commas to numbers if you not passing constructor options
-   const formatNumber = (number) => new Intl.NumberFormat().format(number)
+// just adding commas to numbers if you not passing constructor options
+const formatNumber = (number) => new Intl.NumberFormat().format(number)
 </script>
 
 <template>
@@ -17,8 +17,7 @@
 
          <header class="px-4 mb-4 leading-tight">
             <h1 class="text-lg">
-               <RouterLink
-                  :to="{ name: 'category-items', params: { id: category.id } }"
+               <RouterLink :to="{ name: 'category-items', params: { id: category.id } }"
                   class="font-semibold text-black no-underline hover:underline">
                   {{ category.name }}
                </RouterLink>

@@ -1,31 +1,31 @@
 <script setup>
-   import axios from "axios"
-   import { onMounted, ref } from "vue"
+import axios from "axios"
+import { onMounted, ref } from "vue"
 
-   import ItemsCard from "../ItemsCard.vue"
+import ItemsCard from "../ItemsCard.vue"
 
-   let items = ref([])
-   let isLoading = ref(false)
+let items = ref([])
+let isLoading = ref(false)
 
-   defineProps({ titleSection: String })
+defineProps({ titleSection: String })
 
-   async function getItemsData() {
-      try {
-         isLoading.value = true
-         const response = await axios.get(import.meta.env.VITE_API_URL + "/api/products?limit=3")
-         // console.log(response.data.data.data)
+async function getItemsData() {
+   try {
+      isLoading.value = true
+      const response = await axios.get(import.meta.env.VITE_API_URL + "/api/products?limit=3")
+      // console.log(response.data.data.data)
 
-         items.value = response.data.data.data
-         isLoading.value = false
-      } catch (error) {
-         console.log(error)
-         isLoading.value = false
-      }
+      items.value = response.data.data.data
+      isLoading.value = false
+   } catch (error) {
+      console.log(error)
+      isLoading.value = false
    }
+}
 
-   onMounted(() => {
-      getItemsData()
-   })
+onMounted(() => {
+   getItemsData()
+})
 </script>
 
 <template>

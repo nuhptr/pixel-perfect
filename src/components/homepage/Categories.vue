@@ -1,29 +1,29 @@
 <script setup>
-   import { onMounted, ref } from "vue"
-   import axios from "axios"
+import { onMounted, ref } from "vue"
+import axios from "axios"
 
-   import CategoriesCard from "../CategoriesCard.vue"
+import CategoriesCard from "../CategoriesCard.vue"
 
-   let categories = ref([])
-   let isLoading = ref(false)
+let categories = ref([])
+let isLoading = ref(false)
 
-   onMounted(() => {
-      getCategoriesData()
-   })
+onMounted(() => {
+   getCategoriesData()
+})
 
-   async function getCategoriesData() {
-      try {
-         isLoading.value = true
-         const response = await axios.get(import.meta.env.VITE_API_URL + "/api/categories?limit=4")
-         // console.log(response.data.data)
+async function getCategoriesData() {
+   try {
+      isLoading.value = true
+      const response = await axios.get(import.meta.env.VITE_API_URL + "/api/categories?limit=4")
+      // console.log(response.data.data)
 
-         categories.value = response.data.data.data
-         isLoading.value = false
-      } catch (error) {
-         console.error(error)
-         isLoading.value = false
-      }
+      categories.value = response.data.data.data
+      isLoading.value = false
+   } catch (error) {
+      console.error(error)
+      isLoading.value = false
    }
+}
 </script>
 
 <template>

@@ -1,36 +1,36 @@
 <script setup>
-   import axios from "axios"
-   import { useRoute } from "vue-router"
-   import { onMounted, ref } from "vue"
+import axios from "axios"
+import { useRoute } from "vue-router"
+import { onMounted, ref } from "vue"
 
-   import ItemsCard from "../ItemsCard.vue"
+import ItemsCard from "../ItemsCard.vue"
 
-   let items = ref([])
-   let category = ref({})
-   let isLoading = ref(false)
+let items = ref([])
+let category = ref({})
+let isLoading = ref(false)
 
-   const route = useRoute()
+const route = useRoute()
 
-   async function getItemsData() {
-      try {
-         isLoading.value = true
-         const response = await axios.get(
-            import.meta.env.VITE_API_URL + "/api/categories?id=" + route.params.id + "&show_product=1"
-         )
-         // console.log(response.data.data.products)
+async function getItemsData() {
+   try {
+      isLoading.value = true
+      const response = await axios.get(
+         import.meta.env.VITE_API_URL + "/api/categories?id=" + route.params.id + "&show_product=1"
+      )
+      // console.log(response.data.data.products)
 
-         items.value = response.data.data.products
-         category.value = response.data.data
-         isLoading.value = false
-      } catch (error) {
-         console.log(error)
-         isLoading.value = false
-      }
+      items.value = response.data.data.products
+      category.value = response.data.data
+      isLoading.value = false
+   } catch (error) {
+      console.log(error)
+      isLoading.value = false
    }
+}
 
-   onMounted(() => {
-      getItemsData()
-   })
+onMounted(() => {
+   getItemsData()
+})
 </script>
 
 <template>

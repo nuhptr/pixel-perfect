@@ -1,7 +1,7 @@
 <script setup>
-   import { RouterLink } from "vue-router"
+import { RouterLink } from "vue-router"
 
-   defineProps({ id: Number, item: Object })
+defineProps({ id: Number, item: Object })
 </script>
 
 <template>

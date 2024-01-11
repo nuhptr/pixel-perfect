@@ -1,26 +1,26 @@
 <script setup>
-   import { computed, onBeforeUnmount, onMounted, ref } from "vue"
+import { computed, onBeforeUnmount, onMounted, ref } from "vue"
 
-   import Logo from "./Logo.vue"
-   import NavigationLink from "./NavigationLink.vue"
-   import AuthButton from "./AuthButton.vue"
-   // import UserInfo from "./UserInfo.vue"
+import Logo from "./Logo.vue"
+import NavigationLink from "./NavigationLink.vue"
+import AuthButton from "./AuthButton.vue"
+// import UserInfo from "./UserInfo.vue"
 
-   let isBlurActive = ref(false)
+let isBlurActive = ref(false)
 
-   function updateScroll() {
-      let scrollPosition = window.scrollY || document.documentElement.scrollTop
-      isBlurActive = scrollPosition > 50
-   }
+function updateScroll() {
+   let scrollPosition = window.scrollY || document.documentElement.scrollTop
+   isBlurActive = scrollPosition > 50
+}
 
-   const addBackdrop = computed(() => (isBlurActive ? "backdrop-blur" : ""))
+const addBackdrop = computed(() => (isBlurActive ? "backdrop-blur" : ""))
 
-   onMounted(() => {
-      window.addEventListener("scroll", updateScroll)
-   })
-   onBeforeUnmount(() => {
-      window.removeEventListener("scroll", updateScroll)
-   })
+onMounted(() => {
+   window.addEventListener("scroll", updateScroll)
+})
+onBeforeUnmount(() => {
+   window.removeEventListener("scroll", updateScroll)
+})
 </script>
 
 <template>

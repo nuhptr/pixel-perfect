@@ -1,5 +1,5 @@
 <script setup>
-   import IconBook from "../icons/IconBook.vue"
+import IconBook from "../icons/IconBook.vue"
 </script>
 
 <template>

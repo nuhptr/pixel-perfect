@@ -1,5 +1,5 @@
 <script setup>
-   import IconBadge from "../icons/IconBadge.vue"
+import IconBadge from "../icons/IconBadge.vue"
 </script>
 
 <template>

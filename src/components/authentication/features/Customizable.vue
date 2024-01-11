@@ -1,5 +1,5 @@
 <script setup>
-   import IconLayer from "../icons/IconLayer.vue"
+import IconLayer from "../icons/IconLayer.vue"
 </script>
 
 <template>

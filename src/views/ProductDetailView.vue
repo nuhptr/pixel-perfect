@@ -19,7 +19,7 @@ async function getProductDetails() {
    try {
       isLoading.value = true
       const response = await axios.get(import.meta.env.VITE_API_URL + "/api/products?id=" + route.params.id)
-      // console.log(response.data.data)
+      console.log(response.data.data)
       item.value = response.data.data
       isLoading.value = false
    } catch (error) {
@@ -35,8 +35,8 @@ const features = computed(() => {
 
 onMounted(() => {
    window.scrollTo(0, 0)
-   userStore.fetchUser()
    getProductDetails()
+   userStore.fetchUser()
 })
 </script>
 

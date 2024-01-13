@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router"
 
-defineProps({ id: Number, item: Object })
+const props = defineProps({ id: Number, item: Object })
 </script>
 
 <template>
@@ -11,13 +11,14 @@ defineProps({ id: Number, item: Object })
             <div class="m-4 overflow-hidden rounded-xl">
                <!-- * Use src binding and static path for image -->
                <!-- <img alt="Placeholder" class="block w-full h-auto" :src="'/src/assets/img/' + image" /> -->
-               <img alt="Placeholder" class="block w-full h-auto" :src="item.thumbnails" />
+               <img alt="Placeholder" class="block w-full h-auto" :src="props.item.thumbnails" />
             </div>
          </RouterLink>
 
          <header class="px-4 mb-4 leading-tight">
             <h1 class="text-lg">
-               <RouterLink :to="'/product-details/' + id" class="font-semibold text-black no-underline hover:underline">
+               <RouterLink :to="'/product-details/' + props.id"
+                  class="font-semibold text-black no-underline hover:underline">
                   {{ item.name }}
                </RouterLink>
             </h1>

@@ -3,10 +3,15 @@ import { ref, onMounted, computed } from "vue"
 import { RouterLink, useRoute } from "vue-router"
 import axios from "axios"
 
+import { useUserStore } from "@/stores/user"
+
 import Gallery from "@/components/details/Gallery.vue"
 
 const route = useRoute()
+const userStore = useUserStore()
 
+const user = computed(() => userStore.getUser)
+// const isLoggedIn = computed(() => userStore.isLoggedIn)
 let item = ref(false)
 let isLoading = ref(false)
 
@@ -30,6 +35,7 @@ const features = computed(() => {
 
 onMounted(() => {
    window.scrollTo(0, 0)
+   userStore.fetchUser()
    getProductDetails()
 })
 </script>
@@ -88,11 +94,18 @@ onMounted(() => {
                               </li>
                            </ul>
                         </div>
-
-                        <RouterLink to="/pricing"
-                           class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10">
-                           Download Now
-                        </RouterLink>
+                        <template v-if="user.data.subscription.length > 0">
+                           <a :href="item.file"
+                              class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10">
+                              Download now
+                           </a>
+                        </template>
+                        <template v-else>
+                           <RouterLink to="/pricing"
+                              class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10">
+                              Subscribe
+                           </RouterLink>
+                        </template>
                      </div>
                   </div>
                </aside>

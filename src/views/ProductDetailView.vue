@@ -41,7 +41,7 @@ onMounted(() => {
 </script>
 
 <template>
-   <div v-if="isLoading" class="flex items-center justify-center w-dvw h-dvh">Loading view...</div>
+   <div v-if="isLoading" class="flex items-center justify-center w-dvw h-dvh">Please logged in...</div>
    <div v-else>
       <div v-if="item">
          <div class="container p-2 mx-auto my-10 max-w-7xl">
@@ -94,7 +94,7 @@ onMounted(() => {
                               </li>
                            </ul>
                         </div>
-                        <template v-if="user.data.subscription.length > 0">
+                        <template v-if="user && user.data.subscription.length > 0">
                            <a :href="item.file"
                               class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10">
                               Download now

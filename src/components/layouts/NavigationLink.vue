@@ -1,9 +1,5 @@
 <script setup>
 import { RouterLink } from "vue-router"
-import { ref } from "vue"
-
-let isActive = ref('')
-
 </script>
 
 <template>
